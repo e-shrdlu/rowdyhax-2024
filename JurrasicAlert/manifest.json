@@ -1,0 +1,19 @@
+{
+    "manifest_version": 2,
+    "name": "JurrasicAlert",
+    "version": "1.0",
+  
+    "description": "Detects Phishing emails within emails opened in Firefox.",
+  
+    "icons": {
+      "48": "icons/one-piece.png"
+    },
+  
+    "content_scripts": [
+      {
+        "matches": ["*://*.mozilla.org/*"],
+        "js": ["jurassic.js"]
+      }
+    ]
+      
+  }
