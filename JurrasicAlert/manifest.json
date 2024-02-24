@@ -1,5 +1,5 @@
 {
-    "manifest_version": 2,
+    "manifest_version": 3,
     "name": "JurrasicAlert",
     "version": "1.0",
   
@@ -14,6 +14,16 @@
         "matches": ["*://*.mozilla.org/*"],
         "js": ["jurassic.js"]
       }
-    ]
+    ],
+
+    "action": {
+      "default_icon": { 
+        "48": "icons/one-piece.png"
+      },
+      
+      "default_popup": "index.html"
+    }
+
+    
       
   }
