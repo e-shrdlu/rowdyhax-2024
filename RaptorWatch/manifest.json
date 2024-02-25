@@ -16,7 +16,7 @@
       }
     ],
 
-    "action": {
+    "browser_action": {
       "default_icon": { 
         "48": "icons/one-piece.png"
       },
@@ -24,9 +24,11 @@
       "default_popup": "site.html"
     }, 
 
+    
     "permissions": [
       "webRequest",
-      "*://mozilla.org/*"
+      "*://mozilla.org/*",
+      "activeTab"
     ]
       
   }
