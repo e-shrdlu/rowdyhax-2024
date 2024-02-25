@@ -17,6 +17,7 @@ Our solution is built entirely with HTML, Javascript, Python, and Go with the he
 
 ### Challenges we ran into
 One challenge we ran into was that Javascript was not allowed to run inline in the HTML popups of Firefox extensions. This prevented us from implementing all our features until we learned that putting the Javascript into a separate .js file will allow it to be run.
+We also ran into troubles implementing Google Cloud functions. This prevented us from connecting our detections in Google Cloud into our extension, but with a bit more time we think we could have solved this issue.
 
 ### What's next for RaptorWatch
 The next steps for RaptorWatch are to provide support for all browsers, especially Chromium-based browsers. We also have room to improve our detection mechanisms so that our true positive rate goes up and more suspicious links will be caught. This may likely involve the use of AI to perform better detections, reducing false positives and false negatives.
@@ -29,6 +30,7 @@ The next steps for RaptorWatch are to provide support for all browsers, especial
 5. RaptorWatch is now installed on your current browser window, enjoy!
 
 ## Meet The Team
+
 #### Aditya Dindi: 
 * Junior, Cyber Security
 #### Aidan Kollar:

@@ -3,83 +3,34 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BAD LINK DETECTED</title>
+<title>SUSPICIOUS LINK DETECTED</title>
 <link rel="icon" id="favicon" type="image/png" href="https://static-00.iconduck.com/assets.00/warning-icon-1024x948-072v9v8m.png"> <!-- Reference to the favicon image -->
-<style>
-    body {
-        margin: 0;
-        padding: 0;
-        font-family: Arial, sans-serif;
-        background-color: #ffcccc; /* Light red background */
-        color: #333; /* Dark text color */
-    }
-    .container {
-        max-width: 800px;
-        margin: 50px auto;
-        padding: 20px;
-        background-color: #fff; /* White container background */
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
-    }
-    h1 {
-        color: #ff0000; /* Red text color for warning */
-        font-size: 40px;
-        margin-top: 10px;
-    }
-    p {
-        font-size: 18px;
-        margin-bottom: 20px;
-    }
-    a {
-        color: #ff0000; /* Red color for link */
-        font-weight: bold;
-    }
-	.detection-method {
-        margin-top: 20px;
-        font-weight: bold;
-    }
-    .triggered-yes {
-        color: red;
-    }
-    .triggered-no {
-        color: green;
-    }
-
-    .image-container {
-        text-align: center;
-        margin-bottom: 20px;
-    }
-
-    .image-container img { 
-        display: inline-block;
-    }
-
-</style>
+<link rel="stylesheet" href="site.css"> <!-- Importing the CSS file -->
 <script src="site.js"></script>
 </head>
 <body>
 
 <div class="container">
     <div class="image-container">
-        <img src="icons/RaptorWatchLogo.png" class="img-fluid round center" style="width: 160px; height: 160px;" alt="Raptor Watch Logo">
+        <img src="icons/RaptorWatchLogo.png" class="img-fluid round center" style="width: 200px; height: 200px;" alt="Raptor Watch Logo">
     </div>
 
-    <h1>WARNING: Malicious Site Detected ❗❗</h1>
+    <h1>WARNING: Suspicious Site Detected ❗❗</h1>
     <p>We have detected that you have attempted to visit a potentially malicious website. For your safety and security, we strongly advise against accessing this site.</p>
     <p>The website you tried to visit: <a id="malicious-link" href="#" target="_blank">[Insert Malicious Site URL Here]</a></p>
     <p>If you believe this is a mistake, please contact our support team immediately via email at support@rhproject.org.</p>
     <p>We detect malicious links through recognizing misspellings of common website names (typosquatting) and other industry-proven methods to detect possible attempts at malicious downloads, phishing, and more. <a href="https://www.splunk.com/en_us/blog/learn/typosquatting-types-prevention.html" target="_blank">Typosquatting</a> is the practice of registering a domain with a similar name to a trusted site, but with a typo in it. These sites are used to lure in victims who believe the site to be a trusted link.</p>
 
     <div class="detection-method">
-        Typosquatting Detected: <span id="detection-method-1" class="triggered-no">No</span>
+        Typosquatting Detected: <span id="detection-method-1" class="triggered-yes">Yes</span>
     </div>
     <div class="detection-method">
         Domain registered less than 1 year ago: <span id="detection-method-2" class="triggered-no">No</span>
     </div>
     <div class="detection-method">
-        HTTP Smuggling Detected: <span id="detection-method-3" class="triggered-no">No</span>
+        HTML Smuggling Detected: <span id="detection-method-3" class="triggered-no">No</span>
     </div>
-	<div class="detection-method">
+    <div class="detection-method">
         Malicious Javascript Detected: <span id="detection-method-4" class="triggered-no">No</span>
     </div>
 

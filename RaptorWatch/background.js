@@ -49,10 +49,6 @@ browser.webRequest.onBeforeRequest.addListener(interceptURL, {
   urls: ["<all_urls>"],
 }, ["blocking"]);
 
-
-
-// console.log("BACKGROUND SCRIPT IS RUNNING!");
-
 // if (typeof browser == "undefined") {
 //   // Chrome does not support the browser namespace yet.
 //   globalThis.browser = chrome;
