@@ -22,6 +22,10 @@
       },
       
       "default_popup": "/site.html"
-    }
+    }, 
+
+    "permissions": [
+      "privacy"
+    ]
       
   }
