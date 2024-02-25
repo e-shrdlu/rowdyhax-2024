@@ -22,11 +22,6 @@
       },
       
       "default_popup": "site.html"
-    }, 
-
-    
-    "permissions": [
-      "*://mozilla.org/*"
-    ]
+    }
       
   }
