@@ -31,7 +31,9 @@
 
     "background": {
     "scripts": ["background.js"]
-    }
+    },
+
+    "content_security_policy": "default-src 'self'"
 
       
   }
