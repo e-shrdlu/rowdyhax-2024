@@ -30,6 +30,7 @@ The next steps for RaptorWatch are to provide support for all browsers, especial
 5. RaptorWatch is now installed on your current browser window, enjoy!
 
 ## Meet The Team
+
 #### Aditya Dindi: 
 * Junior, Cyber Security
 #### Aidan Kollar:
