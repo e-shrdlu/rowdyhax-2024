@@ -21,7 +21,7 @@
         "48": "icons/one-piece.png"
       },
       
-      "default_popup": "/site.html"
+      "default_popup": "site.html"
     }, 
 
     "permissions": [
