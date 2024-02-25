@@ -18,7 +18,7 @@
 
     "action": {
       "default_icon": { 
-        "48": "icons/one-piece.png"
+        "48": "icons/RaptorWatchLogo.png"
       },
       
       "default_popup": "site.html"
