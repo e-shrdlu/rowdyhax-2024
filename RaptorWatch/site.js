@@ -68,7 +68,8 @@
 
     function afterDOMLoaded(){
         updateMaliciousLink();
-        fetch('https://jsonplaceholder.typicode.com/todos/1') // change url
+        // api call to our api is not currently working, but will eventually
+        fetch('https://jsonplaceholder.typicode.com/todos/1') // TODO: change url once our api is working
       .then(response => response.json())
       .then(json => updateLinkInfo(json));
     }
