@@ -16,7 +16,7 @@
       }
     ],
 
-    "browser_action": {
+    "action": {
       "default_icon": { 
         "48": "icons/one-piece.png"
       },
