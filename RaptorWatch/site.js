@@ -34,7 +34,7 @@
         console.log("Malicious link:", maliciousLink); // Log the malicious link to the console
         var linkElement = document.getElementById('malicious-link');
         if (maliciousLink && linkElement) {
-            linkElement.href = "https://" + maliciousLink;
+            linkElement.href = maliciousLink;
             linkElement.textContent = maliciousLink;
         }
     }
