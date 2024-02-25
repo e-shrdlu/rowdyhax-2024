@@ -6,7 +6,7 @@
     "description": "Detects Phishing emails within emails opened in Firefox.",
   
     "icons": {
-      "48": "icons/one-piece.png"
+      "48": "icons/RaptorWatchLogo.png"
     },
   
     "content_scripts": [
