@@ -1,6 +1,6 @@
 {
     "manifest_version": 3,
-    "name": "JurrasicAlert",
+    "name": "RaptorWatch",
     "version": "1.0",
   
     "description": "Detects Phishing emails within emails opened in Firefox.",
@@ -12,7 +12,7 @@
     "content_scripts": [
       {
         "matches": ["*://*.mozilla.org/*"],
-        "js": ["jurassic.js"]
+        "js": ["raptor.js"]
       }
     ],
 
