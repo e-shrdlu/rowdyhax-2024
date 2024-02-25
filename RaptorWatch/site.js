@@ -39,7 +39,39 @@
         }
     }
 
+    function updateLinkInfo(json) {
+        // typosquatting
+        // assume yes
+        document.getElementById("detection-method-1").className = "triggered-yes";
+        document.getElementById("detection-method-1").innerText = "Yes";
 
+        //domain registered under a year
+        if (json.userId == 1) { // bad
+            document.getElementById("detection-method-2").className = "triggered-yes";
+            document.getElementById("detection-method-2").innerText = "Yes";
+        } else { // good
+            document.getElementById("detection-method-2").className = "triggered-no";
+            document.getElementById("detection-method-2").innerText = "No";
+        }
+
+        // Self-Signed
+        if (json.id == 0) { // bad
+            document.getElementById("detection-method-3").className = "triggered-yes";
+            document.getElementById("detection-method-3").innerText = "Yes";
+        } else { // good
+            document.getElementById("detection-method-3").className = "triggered-no";
+            document.getElementById("detection-method-3").innerText = "No";
+        }
+
+        // HTML smuggling / malicious js
+        if (json.completed == false) { // bad
+            document.getElementById("detection-method-4").className = "triggered-yes";
+            document.getElementById("detection-method-4").innerText = "Yes";
+        } else { // good
+            document.getElementById("detection-method-4").className = "triggered-no";
+            document.getElementById("detection-method-4").innerText = "No";
+        }
+    }
 
     if(document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded',afterDOMLoaded);
@@ -49,6 +81,9 @@
 
     function afterDOMLoaded(){
         updateMaliciousLink();
+        fetch('https://jsonplaceholder.typicode.com/todos/1') // change url
+      .then(response => response.json())
+      .then(json => updateLinkInfo(json));
     }
 
 
