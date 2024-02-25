@@ -34,6 +34,16 @@
         color: #ff0000; /* Red color for link */
         font-weight: bold;
     }
+	.detection-method {
+        margin-top: 20px;
+        font-weight: bold;
+    }
+    .triggered-yes {
+        color: red;
+    }
+    .triggered-no {
+        color: green;
+    }
 
     .image-container {
         text-align: center;
@@ -59,6 +69,19 @@
     <p>The website you tried to visit: <a id="malicious-link" href="#" target="_blank">[Insert Malicious Site URL Here]</a></p>
     <p>If you believe this is a mistake, please contact our support team immediately via email at support@rhproject.org.</p>
     <p>We detect malicious links through recognizing misspellings of common website names (typosquatting) and other industry-proven methods to detect possible attempts at malicious downloads, phishing, and more. <a href="https://www.splunk.com/en_us/blog/learn/typosquatting-types-prevention.html" target="_blank">Typosquatting</a> is the practice of registering a domain with a similar name to a trusted site, but with a typo in it. These sites are used to lure in victims who believe the site to be a trusted link.</p>
+
+    <div class="detection-method">
+        Typosquatting Detected: <span id="detection-method-1" class="triggered-no">No</span>
+    </div>
+    <div class="detection-method">
+        Domain registered less than 1 year ago: <span id="detection-method-2" class="triggered-no">No</span>
+    </div>
+    <div class="detection-method">
+        HTTP Smuggling Detected: <span id="detection-method-3" class="triggered-no">No</span>
+    </div>
+	<div class="detection-method">
+        Malicious Javascript Detected: <span id="detection-method-4" class="triggered-no">No</span>
+    </div>
 
 </div>
 </body>
