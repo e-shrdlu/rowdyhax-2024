@@ -52,9 +52,6 @@
     }
 
 
-
-
-
     // // Update the malicious link and title
     // window.addEventListener('DOMContentLoaded', (event) => {
     // });
