@@ -12,14 +12,11 @@ Typosquatting is the practice of registering a domain with a similar name to a t
 ### Why is RaptorWatch useful?
 Our product is important because phishing attacks are one of the most common ways organizations can be breached. By proactively blocking such links with RaptorWatch, companies can mitigate the risk of data breaches, financial losses, and reputational damage.
 
-### How are we different from other solutions?
-RaptorWatch is different because it is. Source: Trust me bro
-
 ### How we built it
-Our solution is built entirely with HTML, Javascript, and Python with the help of Google Cloud.
+Our solution is built entirely with HTML, Javascript, Python, and Go with the help of Google Cloud.
 
 ### Challenges we ran into
-Getting JavaScript to run in the extension popup, learning curve for google cloud is steep.
+One challenge we ran into was that Javascript was not allowed to run inline in the HTML popups of Firefox extensions. This prevented us from implementing all our features until we learned that putting the Javascript into a separate .js file will allow it to be run.
 
 ### What's next for RaptorWatch
 The next steps for RaptorWatch are to provide support for all browsers, especially Chromium-based browsers. We also have room to improve our detection mechanisms so that our true positive rate goes up and more suspicious links will be caught.
