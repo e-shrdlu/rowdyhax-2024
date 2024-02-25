@@ -8,7 +8,8 @@ function isSuspectedTyposquat(url) {
   let levenshtein_tolerance = 3; // this many characters off
 
   // extract domain from url
-  const regex = /^(?:https?:\/\/)?(?:[^@\n]+@)?(?:www\.)?([^:\/\n?]+)/i;
+  // const regex = /^(?:https?:\/\/)?(?:[^@\n]+@)?(?:www\.)?([^:\/\n?]+)/i;
+  const regex = /^(?:https?:\/\/)?(?:[^@\n]+@)?(?:[^.]+\.)?([^:\/\n?]+(?:\.[^:\/\n?]+))/i;
   const match = url.match(regex);
   const domain = match ? match[1] : "";
   console.log("found domain: " + domain + " from url: " + url);
@@ -16,8 +17,11 @@ function isSuspectedTyposquat(url) {
   for (let valid_domain of common_domains) {
       // if potential typosquat, return false
       result = levenshtein(valid_domain, domain);
+      
       if (result <= levenshtein_tolerance && ! common_domains.includes(domain)) { // if distance lower than tolerance and not a common domain
-          return true;
+        console.log("DEBUG: SUS!!!!!!!");  
+        console.log("DEBUG: levenshtein is", result, "for", valid_domain, "and", domain);
+        return true;
       }
   }
 
@@ -28,13 +32,14 @@ function isSuspectedTyposquat(url) {
 
 
 function interceptURL(requestDetails) {
-  console.log(`BG SCRIPT WORKING - Loading: ${requestDetails.url}`);
   let sus = isSuspectedTyposquat(requestDetails.url);
-  console.log("BG SCRIPT: domain is sus?", sus);
-  if (sus) {
+  console.log("DEBUG: domain is sus?", sus);
+  if (sus && ! (requestDetails.url.endsWith("#noblock") || requestDetails.url.endsWith("favicon.ico"))) {
     chrome.tabs.create({
       url: location.origin + '/site.html?link=' + requestDetails.url});
       return {cancel: true};
+  } else {
+    return {cancel: false};
   }
 
 }
