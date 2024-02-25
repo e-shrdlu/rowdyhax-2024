@@ -25,7 +25,7 @@ function checkDomain(url) {
     return "";
 }
 
-const test_domains = ["gooogle.com", "yyoutube.com", "youtube.cox", "google.com", "example.com", "asdf.com", "wikimedia.org", "microshaft.co"]
+const test_domains = ["gooogle.com", "yyoutube.com", "youtube.cox", "google.com", "example.com", "asdf.com", "wikimedia.org", "microshaft.co", "forstbank.co"]
 for (let test_domain of test_domains) {
     console.log("testing domain: ", test_domain);
     let result = checkDomain(test_domain);
