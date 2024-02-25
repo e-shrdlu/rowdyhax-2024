@@ -27,7 +27,8 @@
     "permissions": [
     "webRequest",
     "webRequestBlocking",
-    "<all_urls>"],
+    "<all_urls>",
+    "activeTab"],
 
     "background": {
     "scripts": ["background.js"]
