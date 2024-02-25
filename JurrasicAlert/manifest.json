@@ -25,7 +25,8 @@
     }, 
 
     "permissions": [
-      "privacy"
+      "privacy",
+      "*://mozilla.org/*"
     ]
       
   }
